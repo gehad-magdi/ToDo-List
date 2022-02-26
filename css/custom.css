@@ -1,0 +1,100 @@
+#Note {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Note .container {
+  width: 500px;
+  min-height: 500px;
+  max-height: 100%;
+  background: #4caf508c;
+  margin: auto;
+  padding: 20px;
+}
+#Note .container .titleNote {
+  color: #fffce1;
+  font-size: 40px;
+  text-align: center;
+  margin: 5px;
+  font-family: monospace;
+}
+#Note .container .form {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 30%;
+  gap: 5px;
+}
+#Note .container .form .input {
+  font-size: 20px;
+  border: 0px;
+  border-radius: 2px;
+  font-family: monospace;
+  background-color: #fffce1;
+  padding: 10px;
+}
+#Note .container .form .hint {
+  text-align: center;
+  font-size: 15px;
+  color: #ff00009e;
+  font-family: monospace;
+  margin: 0;
+  display: none;
+}
+#Note .container .form .button {
+  font-size: 20px;
+  padding: 10px;
+  border: 3px solid #fffce1;
+  border-radius: 2px;
+  font-family: monospace;
+  background-color: transparent;
+  color: #fffce1;
+  cursor: pointer;
+  font-weight: bold;
+}
+#Note .container .mainTodo .boxTodo {
+  padding: 10px;
+  background: #ddd;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+#Note .container .mainTodo .boxTodo .textTodo {
+  width: 100%;
+  font-size: 25px;
+  margin: 0;
+  font-family: monospace;
+  color: #4caf50;
+  line-height: 35px;
+  line-break: anywhere;
+}
+#Note .container .mainTodo .boxTodo .label {
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#Note .container .mainTodo .boxTodo .label .checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+#Note .container .mainTodo .boxTodo .label .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: rgba(76, 175, 80, 0.55);
+  transform: translate(-25px, -12px);
+}
+#Note .container .mainTodo .boxTodo .delete {
+  background: transparent;
+  border: 0;
+  color: #4caf50;
+}/*# sourceMappingURL=custom.css.map */
