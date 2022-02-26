@@ -1,3 +1,8 @@
+$base-color: #fffce1
+$fram-color: #4caf508c
+$back-color:rgb(255, 252, 225)
+
+
 #Note
     height: 100vh
     display: flex
@@ -7,11 +12,11 @@
         width: 500px
         min-height: 500px
         max-height: 100%
-        background: #4caf508c
+        background: $fram-color
         margin: auto
         padding: 20px
         .titleNote
-            color: #fffce1
+            color: $base-color
             font-size: 40px
             text-align: center
             margin: 5px
@@ -26,16 +31,16 @@
                 border: 0px
                 border-radius: 2px
                 font-family: monospace
-                background-color: rgb(255, 252, 225)
+                background-color: $back-color
                 padding: 10px
             .button
                 font-size: 20px
                 padding: 10px
-                border: 3px solid rgb(255, 252, 225)
+                border: 3px solid $back-color
                 border-radius: 2px
                 font-family: monospace
                 background-color: transparent
-                color: rgb(255, 252, 225)
+                color: $back-color
                 cursor: pointer
                 font-weight: bold
              .hint
@@ -80,7 +85,7 @@
                         left: 0
                         height: 25px
                         width: 25px
-                        background-color: rgba(76, 175, 80, 0.55)
+                        background-color: $back-color
                         transform: translate(-25px, -12px)
                 .delete
                     background: transparent
