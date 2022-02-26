@@ -21,6 +21,7 @@ change.setAttribute('type','submit');
 creating('div','mainTodo','.container');
 // end of
 let outbox = [];
+
 function draw (){
     let toDoBox = `toDoBox${outbox.length - 1}`;
     creating('div',toDoBox,'.mainTodo');
@@ -56,6 +57,13 @@ function draw (){
         let inclouds = outbox.length;        
     })
 }
+function drawFromLocalStorage() {
+    for (let i = 0; i < window.localStorage.length; i++) {
+        outbox.push(JSON.parse(window.localStorage.getItem(localStorage.key(i))));
+        draw();
+    }
+}
+drawFromLocalStorage();
 let form = document.querySelector('.form');
 form.onsubmit = function(e){
     if(this.firstChild.value.length == 0){
@@ -65,8 +73,8 @@ form.onsubmit = function(e){
     else{
         e.preventDefault();
         this.children[2].style.display = 'none';
-        window.localStorage.setItem('ToDo',this.firstChild.value);
-        outbox.push(window.localStorage.getItem('ToDo'))
+        window.localStorage.setItem(`ToDo${outbox.length}`,JSON.stringify(this.firstChild.value));
+        outbox.push(this.firstChild.value)
         draw();
         if(this.firstChild.value.length !== 0){
             this.firstChild.value = '';
